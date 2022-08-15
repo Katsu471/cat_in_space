@@ -13,11 +13,6 @@ screen = pygame.display.set_mode(WINDOW_SIZE,0,32)
 
 player_image = pygame.image.load("Data/images/player.png")
 
-
-
-
-
-
 moveing_up = False
 moveing_left = False
 moveing_right = False
@@ -50,10 +45,7 @@ while True:
         pygame.draw.rect(screen,(0,0,0), test_rect)
 
     #collision end
-
-
-
-
+    
     screen.blit(player_image,player_location)
 
     if moveing_up == True:
@@ -76,8 +68,7 @@ while True:
                 moveing_left = True
             if event.key == K_UP:
                 moveing_up = True
-        
-
+                
         if event.type == KEYUP:
             if event.key == K_RIGHT:
                 moveing_right = False
@@ -85,8 +76,6 @@ while True:
                 moveing_left = False
             if event.key == K_UP:
                 moveing_up = False
-
-
-
+                
     pygame.display.update()
     clock.tick(60)
